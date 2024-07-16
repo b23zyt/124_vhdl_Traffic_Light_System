@@ -1,6 +1,7 @@
+--Author: Group 19, Harry Wang, Benjamin Zeng
 library ieee;
 use ieee.std_logic_1164.all;
-
+A
 entity D_FF is 
 	port(
 		clk	: in std_logic;
@@ -11,6 +12,8 @@ entity D_FF is
 end D_FF;
 
 architecture logic of D_FF is
+--flip flop sets output to input value on rising edge
+--flip flop resets output value to 0 when reset is high
 begin
 	flip_flop: process(clk)
 	begin

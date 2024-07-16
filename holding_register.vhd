@@ -1,3 +1,4 @@
+--Author: Group 19, Harry Wang, Benjamin Zeng
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -19,6 +20,7 @@ entity holding_register is port (
 
 BEGIN
 
+--First DFF output goes into second DFF, second DFF output is holding register output
 
 sreg <= (NOT(register_clr OR reset) AND (dff_out or din));
 dff: process(clk, sreg)

@@ -1,3 +1,4 @@
+--Author: Group 19, Harry Wang, Benjamin Zeng
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -24,7 +25,8 @@ architecture circuit of synchronizer is
 
 	
 BEGIN
-
+--Two DFF to ensure no metastability issues
+--Modular DFF to improve reusability
 INST1: D_FF port map(clk, din, reset, sreg(0));
 INST2: D_FF port map(clk, sreg(0), reset, sreg(1));
 
